@@ -74,7 +74,7 @@ st.subheader('Vänligen välj vecka nedan')
 title = st.text_input ('Välj titel här')
 textruta = st.text_area('')
 st.subheader('Vänligen välj taggar här')
-tags = st.multiselect('Tagg alternativ',
+taggar = st.multiselect('Tagg alternativ',
                       ['#Koding',
                        '#Kundtjänst',
                        '#Felsökning',
