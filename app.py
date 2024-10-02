@@ -30,7 +30,7 @@ else:
         st.write(f"**Titel:** {item['title']}")
         st.write(f"**Innehåll:** {item['textruta']}")
         st.write(f"**Humör:** {item['mood']}")
-        st.write(f'**Tags:** {item['tags']}')
+        st.write(f'**Tags:** {item['taggar']}')
         st.write ('~~~~')
 
 
@@ -40,11 +40,11 @@ else:
 
 from pyarrow import dictionary
 #min kod
-def database (title, textruta, tags, mood, date, vecka):
+def database (title, textruta, taggar, mood, date, vecka):
     date.put_item(
      dictionary = {
         "Week": vecka,
-        "tags": tags,
+        "tags": taggar,
         "title": title,
         "textruta": textruta,
         "mood": mood,
@@ -91,5 +91,5 @@ if st.button('Spara'):
  if not title or not textruta:
   st.error('Titel och innehåll är obligatoriska')
 else:
- database(title, textruta, mood, tags, vecka, date)
+ database(title, textruta, mood, taggar, vecka, date)
  st.success('Inlägg sparat!')
