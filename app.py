@@ -30,8 +30,7 @@ else:
         st.write(f"**Titel:** {item['title']}")
         st.write(f"**Innehåll:** {item['textruta']}")
         st.write(f"**Humör:** {item['mood']}")
-        st.write(f'**Tags:** {item['taggar']}')
-        st.write(f"**Taggar:** {', '.join(item['tags'])}")
+        st.write(f"**Taggar:** {', '.join(item['taggar'])}")
         st.write ('~~~~')
 
 
